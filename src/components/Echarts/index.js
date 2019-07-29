@@ -33,7 +33,6 @@ export default class App extends Component {
             height: this.props.height || 400,
             backgroundColor: this.props.backgroundColor || 'transparent'
           }}
-          scalesPageToFit={Platform.OS !== 'ios'}
           source={(Platform.OS == 'ios') ? require('./tpl.html') : {'uri':'file:///android_asset/tpl.html'}}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
           originWhitelist={['*']}
