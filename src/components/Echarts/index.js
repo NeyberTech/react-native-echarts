@@ -23,6 +23,7 @@ export default class App extends Component {
   }
 
   render() {
+    const scalesPageToFit = Platform.OS === 'ios'
     return (
       <View style={{flex: 1, height: this.props.height || 400,}}>
         <WebView
@@ -36,6 +37,7 @@ export default class App extends Component {
           source={(Platform.OS == 'ios') ? require('./tpl.html') : {'uri':'file:///android_asset/tpl.html'}}
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
           originWhitelist={['*']}
+          scalesPageToFit={scalesPageToFit}
         />
       </View>
     );
