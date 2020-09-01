@@ -37,6 +37,7 @@ export default class App extends Component {
           onMessage={event => this.props.onPress ? this.props.onPress(JSON.parse(event.nativeEvent.data)) : null}
           originWhitelist={['*']}
           scalesPageToFit={scalesPageToFit}
+          androidHardwareAccelerationDisabled={true}
         />
       </View>
     );
