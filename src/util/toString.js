@@ -19,7 +19,7 @@ export default function toString(obj) {
 }
 
 const formatLongName = (obj) => {
-  if (obj.radar && obj.radar.indicator) {
+  if (obj && obj.radar && obj.radar.indicator) {
     obj.radar.indicator.forEach((item, index)=>{
       if (index === 1 || index === 4) {
         item.text = splitString(item.text, 6)
