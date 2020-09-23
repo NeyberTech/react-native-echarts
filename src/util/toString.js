@@ -1,4 +1,5 @@
-export default function toString(obj) {
+export default function toString(objOrign) {
+  let obj = JSON.parse(JSON.stringify(objOrign))
 
   let formatObj = formatLongName(obj)
 
