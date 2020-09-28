@@ -25,10 +25,10 @@ const formatLongName = (obj) => {
   if (obj && obj.radar && obj.radar.indicator) {
     obj.radar.indicator.forEach((item, index)=>{
       if (index === 1 || index === 4) {
-        item.text = splitString(item.text, 6)
+        item.text = item.text.split(' ').map(i => splitString(i, 8)).join(`**n**`)
       }
       if (index === 2 || index === 3) {
-        item.text = splitString(item.text, 9)
+        item.text = item.text.split(' ').map(i => splitString(i, 14)).join(`**n**`)
       }
     })
   } else {
