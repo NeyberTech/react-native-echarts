@@ -38,6 +38,7 @@ export default class App extends Component {
           originWhitelist={['*']}
           scalesPageToFit={scalesPageToFit}
           androidHardwareAccelerationDisabled={true}
+          androidLayerType={'hardware'}
         />
       </View>
     );
